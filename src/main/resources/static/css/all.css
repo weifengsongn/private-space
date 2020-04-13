@@ -1,0 +1,30 @@
+.bodyBackground {
+    background-color: gray;
+}
+
+.login-box {
+    min-width: 350px;
+    /* 让标签剧中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.login-error-box {
+    margin: 50px auto;
+    width: 200px;
+    height: 200px;
+    color: red;
+}
+
+/* 子元素选择器：只选择直接的后代元素
+    限定title类的使用范围，只能在login-box的子代中使用*/
+.login-box > .title {
+    color: aliceblue;
+    font-size: 50px;
+}
+
+.bigWidth {
+    width: 100%;
+}

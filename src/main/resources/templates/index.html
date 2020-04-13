@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh_CH" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>i am title</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/all.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}">
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.4.0/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
+</head>
+<body class="bodyBackground">
+
+    <div class="login-error-box">
+        <p th:if="${!#strings.isEmpty(errorTip)}" th:text="${errorTip}">错误提示</p>
+    </div>
+
+   <div class="login-box ">
+        <div class="title text-center">私人空间</div>
+
+
+       <form  action="http://localhost:8291/space/user/login" id="loginForm">
+           <div class="form-group">
+               <input type="text" name="name" class="form-control" id="username" th:placeholder="#{login.username}">
+           </div>
+           <div class="form-group">
+               <input type="password" name="password" class="form-control" id="password" th:placeholder="#{login.passward}">
+           </div>
+           <div class="checkbox">
+               <label>
+                   <input type="checkbox"> 记住用户名
+               </label>
+           </div>
+           <button type="submit"  class="btn btn-success bigWidth" th:text="#{login.submit}" >登录11</button>
+<!--           <button type="button" id="loginBtn"  class="btn btn-success bigWidth" >登录</button>-->
+       </form>
+   </div>
+
+
+
+<script type="text/javascript">
+
+
+    // $(function(){
+    //
+    //     $("#loginBtn").click(function(){
+    //         let data = {name:$("#username").val(),password:$("#password").val()};
+    //
+    //         $.ajax({
+    //             url:"http://localhost:8291/space/user/login",
+    //             data:data, //请求体需要时一个字符串。
+    //             contentType: 'application/json; charset=utf-8',
+    //             cache:false,
+    //             dataType:'html',
+    //             success:function (result,status,xhr) {
+    //                 console.log(status);
+    //                 console.log(xhr);
+    //             }
+    //         })
+    //
+    //     });
+    //
+    // });
+
+
+</script>
+
+</body>
+</html>

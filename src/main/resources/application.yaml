@@ -1,0 +1,26 @@
+server:
+  servlet:
+    context-path: /space
+  port: 8291
+
+# 配置数据库连接
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    注意：分割配置项用 &  ；而在spring中使用 分号
+#    /// = localost:8080
+    url: jdbc:mysql:///private_space?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+# 配置jpa
+  jpa:
+    # 给jpa配置方言，使用实现的特性
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: true
+    show-sql:  true
+  thymeleaf:
+    cache: false
+  messages:
+    basename: i18n.login

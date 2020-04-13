@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="sidebar" >
+    <div class="menu-control toggle-sidebar">
+        <a class="navbar-brand" href="#"><i class="fa fa-bar-chart"></i>平台功能</a>
+        <i class="fa fa-bars navicon"></i>
+    </div>
+    <ul class="menu">
+        <li class="submenu"  ng-click="active($event)">
+            <a ui-sref="project_Overview" user-promission title="项目概况">
+                <div>
+                    <i class="menu-icon fa fa-dashboard"></i>
+                    <span class="menu-title">项目概况</span>
+                </div>
+            </a>
+        </li>
+
+        <li class="submenu dropdown"  >
+            <a user-promission title="企业管理中心" data-toggle="dropdown">
+                <div>
+                    <i class="menu-icon fa fa-home"></i> <span class="menu-title">企业管理中心</span>
+                </div>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="submenu" ng-click="active($event)">
+                    <a ui-sref="enterprisedetail" user-promission title="企业设置">
+                        <div>
+                            <i class="menu-icon fa fa-drivers-license"></i> <span>企业设置</span>
+                        </div>
+                    </a></li>
+
+                <li class="submenu" ng-click="active($event)">
+                    <a ui-sref="notice.list" user-promission title="企业公告">
+                        <div>
+                            <i class="menu-icon fa fa-feed"></i> <span>企业公告</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="team.list" user-promission title="项目管理">
+                    <div>
+                        <i class="menu-icon fa fa-cubes"></i> <span>项目管理</span>
+                    </div>
+                </a></li>
+                <li class="submenu" ng-click="active($event)"><a ui-sref="user.list" user-promission title="用户管理">
+                    <div>
+                        <i class="menu-icon fa fa-users"></i> <span>用户管理</span>
+                    </div>
+                </a></li>
+                <li class="submenu" ng-click="active($event)"><a ui-sref="promission.list" user-promission title="角色权限管理">
+                    <div>
+                        <i class="menu-icon fa fa-puzzle-piece"></i> <span>角色权限管理</span>
+                    </div>
+                </a></li>
+            </ul></li>
+
+        <li class="submenu dropdown"><a user-promission title="项目基础设置" data-toggle="dropdown">
+            <div>
+                <i class="menu-icon fa fa-cog"></i> <span class="menu-title">项目基础设置</span>
+            </div>
+        </a>
+            <ul class="dropdown-menu">
+                <li class="submenu" ng-click="active($event)"><a ui-sref="project.list" user-promission title="应用模块">
+                    <div>
+                        <i class="menu-icon fa fa-sitemap"></i> <span>应用模块</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu"  ng-click="active($event)"><a ui-sref="qualityThresholds.list" user-promission title="质量阈管理">
+                    <div>
+                        <i class="menu-icon fa fa-sliders"></i> <span>质量阈管理</span>
+                    </div>
+                </a></li>
+
+
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="databasemanage.list" user-promission title="数据库管理">
+                    <div>
+                        <i class="menu-icon fa fa-database"></i> <span>数据库管理</span>
+                    </div>
+                </a></li>
+            </ul></li>
+
+        <li class="submenu dropdown" ><a user-promission title="功能自动化测试" data-toggle="dropdown">
+            <div>
+                <i class="menu-icon fa fa-clock-o"></i> <span class="menu-title">功能自动化测试</span>
+            </div>
+        </a>
+            <ul class="dropdown-menu">
+                <li class="submenu" ng-click="active($event)"><a ui-sref="UITestClient.pool" user-promission title="功能测试机">
+                    <div>
+                        <i class="menu-icon fa fa-laptop"></i> <span>功能测试机</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="UITestEnv.list" user-promission title="测试环境管理">
+                    <div>
+                        <i class="menu-icon fa fa-tags"></i> <span>测试环境管理</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="UITestCase.list" user-promission title="用例管理">
+                    <div>
+                        <i class="menu-icon fa fa-file-code-o"></i> <span>用例管理</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="UITestCaseTag.list" user-promission title="用例标签管理">
+                    <div>
+                        <i class="menu-icon fa fa-bookmark-o"></i> <span>用例标签管理</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="DataSet.list" user-promission title="测试集管理">
+                    <div>
+                        <i class="menu-icon fa fa-table"></i> <span>数据集管理</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="UITestData.list" user-promission title="测试数据管理">
+                    <div>
+                        <i class="menu-icon fa fa-file-text-o"></i> <span>测试数据管理</span>
+                    </div>
+                </a></li>
+
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="UITestReport.list" user-promission title="测试报告">
+                    <div>
+                        <i class="menu-icon fa fa-file-text"></i> <span>测试报告</span>
+                    </div>
+                </a></li>
+
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="UITestPlan.list" user-promission title="测试计划">
+                    <div>
+                        <i class="menu-icon fa fa-hourglass"></i> <span>测试计划</span>
+                    </div>
+                </a></li>
+
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="UITestPlanExecuteHistory.list" user-promission title="测试计划执行记录">
+                    <div>
+                        <i class="menu-icon fa fa-history"></i> <span>测试计划执行记录</span>
+                    </div>
+                </a></li>
+
+            </ul></li>
+
+
+        <li class="submenu dropdown" ><a user-promission title="平台管理" data-toggle="dropdown"  >
+            <div>
+                <i class="menu-icon fa fa-cogs"></i> <span class="menu-title">平台管理</span>
+            </div>
+        </a>
+            <ul class="dropdown-menu">
+                <li class="submenu" ng-click="active($event)"><a ui-sref="UITestClient.list" user-promission title="功能测试机资源" >
+                    <div>
+                        <i class="menu-icon fa fa-file"></i> <span>功能测试机资源</span>
+                    </div>
+                </a></li>
+                <li class="submenu" ng-click="active($event)"><a ui-sref="ConfigInfo.list" user-promission title="平台系统参数">
+                    <div>
+                        <i class="menu-icon fa fa-file"></i> <span>平台系统参数</span>
+                    </div>
+                </a></li>
+                <li class="submenu" ng-click="active($event)"><a ui-sref="menu" user-promission title="菜单管理">
+                    <div>
+                        <i class="menu-icon fa fa-file"></i> <span>菜单管理</span>
+                    </div>
+                </a></li>
+                <li class="submenu" ng-click="active($event)"><a ui-sref="ZenTao.list" user-promission title="禅道参数配置">
+                    <div>
+                        <i class="menu-icon fa fa-file"></i> <span>禅道参数配置</span>
+                    </div>
+                </a></li>
+            </ul></li>
+
+        <li class="submenu dropdown" ><a user-promission title="部署管理" data-toggle="dropdown">
+            <div>
+                <i class="menu-icon fa fa-server"></i> <span class="menu-title">部署管理</span>
+            </div>
+        </a>
+            <ul class="dropdown-menu">
+                <li class="submenu" ng-click="active($event)">
+                    <a ui-sref="resource.list" user-promission title="主机组管理">
+                        <div>
+                            <i class="menu-icon fa fa-tasks"></i> <span>主机组管理</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="submenu" ng-click="active($event)" >
+                    <a ui-sref="step.list" user-promission title="步骤设定">
+                        <div>
+                            <i class="menu-icon glyphicon glyphicon-indent-left"></i> <span>步骤设定</span>
+                        </div>
+                    </a></li>
+
+                <li class="submenu" ng-click="active($event)">
+                    <a ui-sref="template.list" user-promission title="模板管理">
+                        <div>
+                            <i class="menu-icon fa fa-thumb-tack"></i> <span>模板管理</span>
+                        </div>
+                    </a></li>
+
+                <li class="submenu" ng-click="active($event)">
+                    <a ui-sref="deployTask.list" user-promission title="部署任务">
+                        <div>
+                            <i class="menu-icon fa fa-thumb-tack"></i> <span>部署任务</span>
+                        </div>
+                    </a></li>
+            </ul>
+        </li>
+
+        <li class="submenu dropdown"><a user-promission title="接口管理" data-toggle="dropdown">
+            <div>
+                <i class="menu-icon fa fa-cube"></i> <span class="menu-title">接口管理</span>
+            </div>
+        </a>
+            <ul class="dropdown-menu">
+                <li class="submenu" ng-click="active($event)"><a ui-sref="apiEnv.list" user-promission title="接口环境管理">
+                    <div>
+                        <i class="menu-icon fa fa-tags"></i> <span>接口环境管理</span>
+                    </div>
+                </a></li>
+                <li class="submenu" ng-click="active($event)"><a ui-sref="apiManage.list" user-promission title="swagger接口管理">
+                    <div>
+                        <i class="menu-icon fa fa-exchange"></i> <span>swagger接口管理</span>
+                    </div>
+                </a></li>
+                <li class="submenu" ng-click="active($event)"><a ui-sref="apiGroup.list" user-promission title="接口分组管理">
+                    <div>
+                        <i class="menu-icon fa fa-file-text-o"></i> <span>接口文档导出</span>
+                    </div>
+                </a></li>
+                <li class="submenu" ng-click="active($event)"><a ui-sref="apiTestCase.list" user-promission title="接口测试用例">
+                    <div>
+                        <i class="menu-icon fa fa-file-code-o"></i> <span>接口测试用例</span>
+                    </div>
+                </a></li>
+
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="apiTestPlan.list" user-promission title="测试计划">
+                    <div>
+                        <i class="menu-icon fa fa-hourglass"></i> <span>接口测试计划</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a ui-sref="APITestPlanReport.list" user-promission title="接口测试报告">
+                    <div>
+                        <i class="menu-icon fa fa-file-text"></i> <span>接口测试报告</span>
+                    </div>
+                </a></li>
+            </ul></li>
+
+
+
+        <li class="submenu dropup"><a title="性能测试" user-promission data-toggle="dropdown">
+            <div>
+                <i class="menu-icon fa fa-th-large"></i> <span class="menu-title">性能测试</span>
+            </div>
+        </a>
+            <ul class="dropdown-menu">
+                <li class="submenu" ng-click="active($event)"><a user-promission ui-sref="ptEnv.list"  title="性能测试环境">
+                    <div>
+                        <i class="menu-icon fa fa-tags"></i> <span>性能测试环境</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a user-promission ui-sref="ptDataTemplate.list"  title="数据模板">
+                    <div>
+                        <i class="menu-icon fa fa-link"></i> <span>数据模板</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a user-promission ui-sref="ptAPI.list"  title="接口参数配置">
+                    <div>
+                        <i class="menu-icon fa fa-cube"></i> <span>接口参数配置</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a user-promission ui-sref="ptMonitorIndex.list"  title="数据模板">
+                    <div>
+                        <i class="menu-icon fa fa-thermometer-empty"></i> <span>指标维护</span>
+                    </div>
+                </a></li>
+
+
+                <li class="submenu" ng-click="active($event)"><a user-promission ui-sref="ptConfig.list"  title="压测配置">
+                    <div>
+                        <i class="menu-icon fa fa-cubes"></i> <span>压测配置</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a user-promission ui-sref="ptExecuteHistory.list"  title="压测历史记录">
+                    <div>
+                        <i class="menu-icon fa fa-history"></i> <span>压测历史记录</span>
+                    </div>
+                </a></li>
+
+                <li class="submenu" ng-click="active($event)"><a user-promission ui-sref="ptReport.list"  title="压测历史与报告">
+                    <div>
+                        <i class="menu-icon fa fa-file-text"></i> <span>压测报告</span>
+                    </div>
+                </a></li>
+            </ul></li>
+    </ul>
+</div>
+
+</body>
+</html>

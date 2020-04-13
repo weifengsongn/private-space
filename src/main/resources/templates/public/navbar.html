@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh_CH" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>navbar</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/all.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}">
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.4.0/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 90%" th:fragment="spaceNavbar">
+    <a class="navbar-brand" href="#" style="color: gold">私人空间</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">用户设置<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+</body>
+</html>

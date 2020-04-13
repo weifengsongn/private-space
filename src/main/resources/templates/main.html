@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh_CH" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>main</title>
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap-table/1.16.0/dist/bootstrap-table.css}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap-glyphicons/bdd2cbfba0/css/bootstrap-glyphicons.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/all.css}">
+</head>
+<body>
+    <p th:if="${!#strings.isEmpty(successTip)}" th:text="${successTip}">正确提示</p>
+
+    <div th:replace="public/navbar :: spaceNavbar"></div>
+    <table id="table"></table>
+
+    <div id="toolbar" class="btn-group">
+        <button id="add" class="btn btn-default" >
+            <i class="glyphicon glyphicon-plus"></i> 新增
+        </button>
+        <button id="remove" class="btn btn-default" >
+            <i class="glyphicon glyphicon-remove"></i> 删除
+        </button>
+    </div>
+    <div>我是内容</div>
+
+
+    <script th:src="@{/webjars/jquery/3.4.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.14.3/popper.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap-table/1.16.0/dist/bootstrap-table.js}"></script>
+    <script th:src="@{/webjars/bootstrap-table/1.16.0/dist/bootstrap-table-locale-all.js}"></script>
+    <script th:src="@{/js/all.js}"></script>
+
+</body>
+
+</html>
