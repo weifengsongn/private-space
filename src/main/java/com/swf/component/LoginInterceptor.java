@@ -19,7 +19,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 		Object username = request.getSession().getAttribute("username");
 		if (StringUtils.isEmpty(username)) {
 			request.setAttribute("message","请登录");
-			request.getRequestDispatcher("/login").forward(request,response);
+			request.getRequestDispatcher("/index").forward(request,response);
 			return false;
 		} else {
 			return true;

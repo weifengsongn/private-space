@@ -1,0 +1,11 @@
+.table td, .table th {
+    padding: .30rem;
+}
+
+/*table thead, table thead th {*/
+/*    padding: .34rem;*/
+/*}*/
+
+table >thead {
+    background-color: cadetblue;
+}

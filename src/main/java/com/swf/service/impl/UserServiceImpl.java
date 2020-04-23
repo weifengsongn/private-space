@@ -44,10 +44,10 @@ public class UserServiceImpl implements UserService {
      * @return 对象列表
      */
     @Override
-    public List<User> queryAllByLimit(int page, int size) {
-//        构建分页参数，调用分页方法
-        Pageable pageable = PageRequest.of(page,size);
-        List<User> all = this.userDao.findAll(pageable).getContent();
+    public Page<User> queryAllByLimit(int page, int size, String sort, String sortField) {
+//        页码、每页数据、排序规则、排序字段
+        Pageable pageable = PageRequest.of(page,size, "id".equals(sortField)? Sort.Direction.DESC: Sort.Direction.fromString(sort), sortField);
+        Page<User> all = userDao.findAll(pageable);
         return all;
     }
 
@@ -72,6 +72,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteById(Long id) {
         this.userDao.deleteById(id);
+    }
+
+    @Override
+    public void deleteByEntitys(List<User> user) {
+        userDao.deleteAll(user);
     }
 
     @Override

@@ -22,4 +22,5 @@ public interface UserDao extends JpaSpecificationExecutor<User>, PagingAndSortin
 	User findByName(String name);
 
 
+
 }

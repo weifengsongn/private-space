@@ -1,6 +1,8 @@
 package com.swf.service;
 
 import com.swf.entity.User;
+import org.springframework.data.domain.Page;
+
 import java.util.List;
 
 /**
@@ -26,7 +28,7 @@ public interface UserService {
      * @param size 每页条数
      * @return 对象列表
      */
-    List<User> queryAllByLimit(int page, int size);
+    Page<User> queryAllByLimit(int page, int size, String sort, String sortField);
 
     /**
      * 新增数据
@@ -45,10 +47,14 @@ public interface UserService {
      */
     void deleteById(Long id);
 
+    void deleteByEntitys(List<User> user);
+
     /**
      *  根据name查找用户
      * @param name
      */
     User findByName(String name);
+
+
 
 }
